@@ -17,10 +17,6 @@ if(isset($_POST["vergelijking"])){
         $first = (-$x + $discriminant_squared)/(2 * $xkwadraat); 
         $second = (-$x - $discriminant_squared)/(2 * $xkwadraat); 
         $answer = [$first, $second];
-
-        
-        
-        
         
     }
 
