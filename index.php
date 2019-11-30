@@ -52,16 +52,22 @@ if(isset($_POST["vergelijking"])){
 
 </form>
 </div>
-<div class="materialbox">
+
 <?php
 
 if(isset($answer)){
+    echo "<div class=\"materialbox\">";
     echo "<h2> Oplossing </h2>";
     echo "<p><b>Discriminant: </b>" . $discriminant . "<br><b>Vierkantswortel van de Discriminant: </b>" . $discriminant_squared . "</p>";
     echo "<p><b>Eerste oplossing: </b>" . $answer[0] . "<br><b>Tweede oplossing: </b>" . $answer[1] . "</p>";
+
+    if(!isset($error)){
+        echo "</div>";
+    }
 }
 if(isset($error)){
     echo "<p><b>Foutmelding: </b>$error</p>";
+    echo "</div>";
 }
 
 ?>
