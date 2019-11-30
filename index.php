@@ -17,6 +17,10 @@ if(isset($_POST["vergelijking"])){
         $first = (-$x + $discriminant_squared)/(2 * $xkwadraat); 
         $second = (-$x - $discriminant_squared)/(2 * $xkwadraat); 
         $answer = [$first, $second];
+
+        
+        
+        
         
     }
 
@@ -35,21 +39,24 @@ if(isset($_POST["vergelijking"])){
 
 <body>
     <div class="heading">
-        <h1> Los nu jouw 2de graads vergelijking op! </h1>
+        <h1> Quadratic Solver </h1>
     </div>
-<div class="content">
+<div class="materialbox">
+<h2> Typ de vergelijking in </h2>
 <form method="POST">
+    
     <input type="text" name="xkwadraat" required>x²
     <input type="text" name="x" required>x
     <input type="text" name="getal" required><br>
     <button type="submit" name="vergelijking"> Los op! </button>
 
 </form>
-
+</div>
+<div class="materialbox">
 <?php
 
 if(isset($answer)){
-    echo "<br><hr>";
+    echo "<h2> Oplossing </h2>";
     echo "<p><b>Discriminant: </b>" . $discriminant . "<br><b>Vierkantswortel van de Discriminant: </b>" . $discriminant_squared . "</p>";
     echo "<p><b>Eerste oplossing: </b>" . $answer[0] . "<br><b>Tweede oplossing: </b>" . $answer[1] . "</p>";
 }
@@ -59,4 +66,5 @@ if(isset($error)){
 
 ?>
 </div>
+
 </body> 
