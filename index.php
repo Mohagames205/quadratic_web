@@ -13,15 +13,18 @@ if(isset($_POST["vergelijking"])){
             $error = "De vergelijking is niet oplosbaar! De discriminant is negatief.";
         }
 
-        $discriminant_squared = sqrt($discriminant);
-        $first = (-$x + $discriminant_squared)/(2 * $xkwadraat); 
-        $second = (-$x - $discriminant_squared)/(2 * $xkwadraat); 
+        $discriminant_sqrt = sqrt($discriminant);
+        $first = (-$x + $discriminant_sqrt)/(2 * $xkwadraat);
+        if($discriminant !== 0){
+            $second = (-$x - $discriminant_sqrt)/(2 * $xkwadraat);  
+        }
+        else{
+            $second = "/";
+        }
+        
+        
         $answer = [$first, $second];
-
-        
-        
-        
-        
+    
     }
 
 
@@ -58,7 +61,7 @@ if(isset($_POST["vergelijking"])){
 if(isset($answer)){
     echo "<div class=\"materialbox\">";
     echo "<h2> Oplossing </h2>";
-    echo "<p><b>Discriminant: </b>" . $discriminant . "<br><b>Vierkantswortel van de Discriminant: </b>" . $discriminant_squared . "</p>";
+    echo "<p><b>Discriminant: </b>" . $discriminant . "<br><b>Vierkantswortel van de Discriminant: </b>" . $discriminant_sqrt . "</p>";
     echo "<p><b>Eerste oplossing: </b>" . $answer[0] . "<br><b>Tweede oplossing: </b>" . $answer[1] . "</p>";
 
     if(!isset($error)){
