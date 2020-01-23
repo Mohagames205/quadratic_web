@@ -59,6 +59,13 @@ if(isset($_POST["vergelijking"])){
 <?php
 
 if(isset($answer)){
+    echo "<div class=\"materialbox\">
+    
+    <h2> Stap 1: Discriminant berekenen </h2>
+    <p><b>D = </b>b² - 4*a*c</p>
+    <p><b>D = </b>" . $x . "² - 4 * $xkwadraat * $getal </p>
+
+";
     echo "<div class=\"materialbox\">";
     echo "<h2> Oplossing </h2>";
     echo "<p><b>Discriminant: </b>" . $discriminant . "<br><b>Vierkantswortel van de Discriminant: </b>" . $discriminant_sqrt . "</p>";
