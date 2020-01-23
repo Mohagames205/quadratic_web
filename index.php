@@ -62,7 +62,8 @@ if(isset($answer)){
     echo "
     
     <div class='materialbox'>
-    <h2>Gegevens: a = $xkwadraat, b = $x, c = $getal</h2>
+    <h2>Gegevens</h2>
+    <p>a = $xkwadraat, b = $x, c = $getal</p>
     </div>
     
     <div class=\"materialbox\">
