@@ -64,17 +64,17 @@ if(isset($answer)){
     <div class=\"materialbox\">
     
     <h2> Stap 1: Discriminant berekenen </h2>
-    <p><b>D = </b><i>b² - 4 <small>x</small> a <small>x</small> c</i></p>
-    <p><b>D = </b>" . $x . "² - 4 x $xkwadraat x $getal</p>
-    <p><b>D = </b>" . pow($x, 2).  " - " . 4 * $xkwadraat * $getal . " = $discriminant</p>
+    <p><b>D = b² - 4 <small>x</small> a <small>x</small> c</b></p>
+    <p><b>D = </b><i>" . $x . "² - 4 <small>x</small> $xkwadraat <small>x</small> $getal</i></p>
+    <p><b>D = </b><i>" . pow($x, 2).  " - " . 4 * $xkwadraat * $getal . " = $discriminant</i></p>
     <p><b>√D = $discriminant_sqrt</b></p>
     </div>
     
     <div class='materialbox'>
     <h2> Stap 2: formule invullen</h2>
     
-    <p><b>x1, x2 =</b>(-b ± √D)/2a</p> 
-    <p><b>x1, x2</b> = (" . -$x ." ± $discriminant_sqrt)/ " . 2 * $xkwadraat . "</p>
+    <p><b>x1, x2 =(-b ± √D)/2a</b></p> 
+    <p><b>x1, x2</b> = <i>(" . -$x ." ± $discriminant_sqrt)/ " . 2 * $xkwadraat . "</i></p>
     
     </div>
 ";
