@@ -60,20 +60,24 @@ if(isset($_POST["vergelijking"])){
 
 if(isset($answer)){
     echo "
-
+    
+    <div class='materialbox'>
+    <h2>Gegevens: a = $xkwadraat, b = $x, c = $getal</h2>
+    </div>
+    
     <div class=\"materialbox\">
     
     <h2> Stap 1: Discriminant berekenen </h2>
     <p><b>D = b² - 4 <small>x</small> a <small>x</small> c</b></p>
     <p><b>D = </b><i>" . $x . "² - 4 <small>x</small> $xkwadraat <small>x</small> $getal</i></p>
-    <p><b>D = </b><i>" . pow($x, 2).  " - " . 4 * $xkwadraat * $getal . " = $discriminant</i></p>
+    <p><b>D = </b><i>" . pow($x, 2).  " - " . 4 * $xkwadraat * $getal . " <b>=</b> $discriminant</i></p>
     <p><b>√D = $discriminant_sqrt</b></p>
     </div>
     
     <div class='materialbox'>
     <h2> Stap 2: formule invullen</h2>
     
-    <p><b>x1, x2 =(-b ± √D)/2a</b></p> 
+    <p><b>x1, x2 = (-b ± √D)/2a</b></p> 
     <p><b>x1, x2</b> = <i>(" . -$x ." ± $discriminant_sqrt)/ " . 2 * $xkwadraat . "</i></p>
     
     </div>
