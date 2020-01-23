@@ -2,9 +2,9 @@
 
 
 if(isset($_POST["vergelijking"])){
-    $xkwadraat = $_POST["xkwadraat"];
-    $x = $_POST["x"];
-    $getal = $_POST["getal"];
+    $xkwadraat = htmlspecialchars($_POST["xkwadraat"]);
+    $x = htmlspecialchars($_POST["x"]);
+    $getal = htmlspecialchars($_POST["getal"]);
 
     if(is_numeric($xkwadraat) && is_numeric($x) && is_numeric($getal)){
         $discriminant = pow($x, 2) - 4 * $xkwadraat * $getal;
@@ -59,14 +59,32 @@ if(isset($_POST["vergelijking"])){
 <?php
 
 if(isset($answer)){
-    echo "<div class=\"materialbox\">
+    echo "
+    
+    <div class='materialbox'>
+    <h2>Gegevens</h2>
+    <p><b>a</b>: $xkwadraat</p>
+    <p><b>b</b>: $x</p>
+    <p><b>c</b>: $getal</p>
+    </div>
+
+
+    <div class=\"materialbox\">
     
     <h2> Stap 1: Discriminant berekenen </h2>
     <p><b>D = </b>b² - 4*a*c</p>
     <p><b>D = </b>" . $x . "² - 4 x $xkwadraat x $getal </p>
-    <p><b>D = </b>" . pow($x, 2).  " - " . 4 * $xkwadraat * $getal. "</p>
+    <p><b>D = </b>" . pow($x, 2).  " - " . 4 * $xkwadraat * $getal . " = $discriminant</p>
+    <p><b>√D = $discriminant_sqrt</b></p>
     </div>
-
+    
+    <div class='materialbox'>
+    <h2> Stap 2: formule invullen</h2>
+    
+    <p><b>x1, x2 =</b>(-b ± √D)/2a</p> 
+    <p><b>x1, x2</b> = (" . -$x ." ± $discriminant_sqrt)/ " . 2 * $xkwadraat . "</p>
+    
+    </div>
 ";
     echo "<div class=\"materialbox\">";
     echo "<h2> Oplossing </h2>";
