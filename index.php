@@ -63,7 +63,9 @@ if(isset($answer)){
     
     <h2> Stap 1: Discriminant berekenen </h2>
     <p><b>D = </b>b² - 4*a*c</p>
-    <p><b>D = </b>" . $x . "² - 4 * $xkwadraat * $getal </p>
+    <p><b>D = </b>" . $x . "² - 4 x $xkwadraat x $getal </p>
+    <p><b>D = </b>" . pow($x, 2).  " - " . 4 * $xkwadraat * $getal. "</p>
+    </div>
 
 ";
     echo "<div class=\"materialbox\">";
